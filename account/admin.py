@@ -19,14 +19,14 @@ class CustomeUserAdmin(UserAdmin):
             ("ユーザー情報",{
                 'fields':('user_id','password','email')}
             ),("権限",{
-                'fields':('is_admin','is_department')
+                'fields':('is_activate','is_staff')
             })
         )
     form = CustomeUserChangeForm
     add_form = CustomeUserCreationForm
     
-    list_filter = ('is_admin','is_department',)
-    list_display =('user_id','email','is_admin','is_department')
+    list_filter = ('is_activate','is_staff',)
+    list_display =('user_id','email','is_activate','is_staff')
     search_fields = ['user_id',]
     ordering =('user_id',)
 
