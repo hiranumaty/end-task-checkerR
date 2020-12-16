@@ -43,8 +43,10 @@ INSTALLED_APPS = [
     'djoser',
 
     #Modules
+    'account.apps.AccountConfig',
     'depts.apps.DeptsConfig',
     'apiv1.apps.Apiv1Config',
+    
 ]
 
 MIDDLEWARE = [
@@ -80,7 +82,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-#AUTH_USER_MODEL = 'users.CustomUser'
+AUTH_USER_MODEL = 'account.User'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
