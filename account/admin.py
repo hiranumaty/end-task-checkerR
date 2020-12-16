@@ -18,9 +18,9 @@ class CustomeUserAdmin(UserAdmin):
     fieldsets =(
             ("ユーザー情報",{
                 'fields':('user_id','password','email')}
-            ),"権限",{
+            ),("権限",{
                 'fields':('is_admin','is_department')
-            }
+            })
         )
     form = CustomeUserChangeForm
     add_form = CustomeUserCreationForm

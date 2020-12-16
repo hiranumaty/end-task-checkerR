@@ -29,7 +29,7 @@ class User(AbstractBaseUser,PermissionsMixin):
         db_table = 'users'
         verbose_name = 'ログインユーザー'
         verbose_name_plural = 'ログインユーザー'
-    user_id = models.UUIDField(verbose_name='ユーザーID',primary_key=True, default=uuid.uuid4, editable=False,unique=True)
+    user_id = models.UUIDField(verbose_name='ユーザーID',primary_key=True, default=uuid.uuid4, editable=True,unique=True)
     is_department = models.BooleanField(verbose_name='部門長権限',default=False)
     is_admin = models.BooleanField(verbose_name='管理者権限',default=False)
     email = models.EmailField(verbose_name='メールアドレス',blank=False,)
