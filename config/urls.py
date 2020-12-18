@@ -23,5 +23,6 @@ urlpatterns = [
     path('api/v1/auth/',include('djoser.urls')),
     path('api/v1/auth/',include('djoser.urls.jwt')),
     path('api/v1/',include('apiv1.urls')),
-    re_path('',RedirectView.as_view(url='/')),
+    
+    re_path('',RedirectView.as_view(url='api/v1/login')),
 ]

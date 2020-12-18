@@ -135,6 +135,10 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
 }
+#ログイン用のURL
+LOGIN_ERROR_URL = "/api/v1/login"
+LOGIN_URL = "/api/v1/login"
+LOGIN_REDIRECT_URL = "/api/v1/index/"
 
 SIMPLE_JWT = {
     'AUTH_HEADER_TYPES':('JWT',),
